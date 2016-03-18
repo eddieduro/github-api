@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/animate.css">
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
@@ -9,11 +10,18 @@
   </head>
   <body class="container">
     <h1>Github User Search</h1>
-    <label for="yourCity">Enter your city:</label>
-    <input id="yourCity" type="text" value="">
-    <a class="btn btn-danger" id="missingBike">FIND</a>
-    <div id="bikeList">
-
+    <form>
+      <label for="user">Find user:</label>
+      <input id="user" type="text">
+      <button class="btn btn-danger" id="userSearch">FIND</button>
+    </form>
+    <div id="result">
+    
+    </div>
+    <div>
+      <ul id="repos">
+        
+      </ul>
     </div>
   </body>
 </html>
