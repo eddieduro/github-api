@@ -13,6 +13,5 @@ $(document).ready(function() {
 		event.preventDefault();
 		var searchedUser = $('#user').val();
 		var results = getRepos(searchedUser);
-
-
+  });
 });
