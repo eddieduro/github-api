@@ -4,7 +4,7 @@
 
 March 18, 2016
 
-##### By Molly Curtin
+##### By Eddie Duro
 
 ### Description
 
@@ -44,4 +44,4 @@ A webpage to search for GitHub repositories using GitHub's API.
 
 *This software is licensed under the MIT license.*
 
-&copy; 2016 **Molly Curtin**
+&copy; 2016 **Eddie Duro**
