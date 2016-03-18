@@ -1,23 +1,59 @@
 $dark-color-theme: #2A2826;
+$secondary-color: #35dc9b;
+
+// Fonts
 $font-default-color: white;
+$link-hover: #35dc9b;
+$default-font-family: 'Roboto', sans-serif;
+
+// media queries
+$desktop: 1260px;
+$medium: 960px;
+$tablet: 768px;
+$mobile: 480px;
+
+
 
 .btn-danger {
   border: none;
 }
 
 html, body{
+  height: 100%;
   background-color: $dark-color-theme;
+  margin: 0;
+  font-family: $default-font-family;
+
   h1, h2, h3, h4, h5 {
     color: $font-default-color;
   }
   p {
     color: $font-default-color;
   }
+  a {
+    color: $font-default-color;
+    font-size: 20px;
 
+    &:hover{
+      color: $link-hover;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+  span {
+    color: $link-hover;
+  }
+
+  // loading screen
   .loading {
     background: url('/../loading.gif') no-repeat center center;
     background-size: contain;
-    height: 200px;
+    height: 600px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
   section {
       opacity: 0;
@@ -28,5 +64,78 @@ html, body{
   }
   .loaded section {
     opacity: 1;
+  }
+  .container {
+    width: 470px;
+    @media (min-width: $medium){
+      width: 370px;
+    }
+  }
+  // form
+  form {
+  display: table;
+  margin: 40px auto;
+
+    label {
+      position: relative;
+      display: block;
+
+      input {
+        font: 18px Helvetica, Arial, sans-serif;
+        box-sizing: border-box;
+        display: block;
+        border: none;
+        padding: 20px;
+        width: 300px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+
+        &::-webkit-input-placeholder {
+          transition: all 0.2s ease-in-out;
+          color: #000;
+          font: 18px $default-font-family;
+        }
+
+        &:focus, &.populated {
+          padding-top: 28px;
+          padding-bottom: 12px;
+
+          &::-webkit-input-placeholder {
+            color: transparent;
+          }
+
+          & + span {
+            opacity: 1;
+            top: 10px;
+          }
+        }
+      }
+      span {
+        color: $secondary-color;
+        font: 13px Helvetica, Arial, sans-serif;
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+  // form end
+  .btn {
+    background-color: $secondary-color;
+    height: 60px;
+    width: 100px;
+  }
+}
+.sideNav {
+  background-color: white;
+  width: 300px;
+  position: absolute;
+  height: 100%;
+  @media (max-width: $medium){
+    visibility: hidden;
   }
 }

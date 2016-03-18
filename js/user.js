@@ -11,10 +11,10 @@ exports.getRepos = function(user){
 			$.get(reposUrl).then(function(response2){
 				$.each(response2, function(i, repo){
 				$('#result').html("<h2> Your results: </h2><hr><h3>" + name + "</h3>");
-				$('#repos').append("<li><a target='_blank' href='"+ repo.svn_url +"'>" + repo.name + "</a></li>");
+				$('#repos').append("<li class='animated slideInDown'><a target='_blank' href='"+ repo.svn_url +"'>" + repo.name + "</a><span> " + repo.description + "</span></li>");
 					// if(repo.hasOwnProperty('description')){
 					// 	$('#repos').append("<li>" + repo.name + "</li>");
-					// } 
+					// }
 				});
 
 			});
@@ -23,5 +23,3 @@ exports.getRepos = function(user){
     console.log(error.responseJSON.message);
   });
 }
-
-

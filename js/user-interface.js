@@ -14,4 +14,19 @@ $(document).ready(function() {
 		var searchedUser = $('#user').val();
 		var results = getRepos(searchedUser);
   });
+
+  $(function() {
+  $('input').on('change', function() {
+    var input = $(this);
+    if (input.val().length) {
+      input.addClass('populated');
+    } else {
+      input.removeClass('populated');
+    }
+  });
+
+  setTimeout(function() {
+    $('#user').trigger('focus');
+  }, 500);
+});
 });
