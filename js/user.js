@@ -19,7 +19,7 @@ exports.getRepos = function(user){
 					console.log(i, repo);
 					$('.profilePic').html("<img id='avatar' src='"+ image +"'>");
 					$('#caption').text(name);
-					$('#profileLink').html("<p id='profileLink'><a href='"+ profileUrl +"'>" + profileUrl + "</a></p>");
+					$('#profileLink').html("<p id='profileLink'><a href='"+ profileUrl +" 'target='_blank''>" + profileUrl + "</a></p>");
 					$('#result').html("<h3>" + name + "'s repositories</h3>");
 					$('#repos').removeClass('emptyList').prepend("<li class='animated slideInDown'><a target='_blank' href='"+ repo.svn_url +"'>" + repo.name + "</a><span> " + repo.description + "</span></li>");
 					if(hireable){
