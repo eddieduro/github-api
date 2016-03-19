@@ -1,5 +1,6 @@
 $dark-color-theme: #2A2826;
 $secondary-color: #35dc9b;
+$secondary-hover: #17875b;
 
 // Fonts
 $font-default-color: white;
@@ -45,6 +46,12 @@ html, body{
   span {
     color: $link-hover;
   }
+
+  .emptyList {
+    color: white;
+    visibility: visible;
+  }
+
 
   // loading screen
   .loading {
@@ -126,16 +133,53 @@ html, body{
   // form end
   .btn {
     background-color: $secondary-color;
-    height: 60px;
     width: 100px;
+    display: inline;
+    margin-top: -19px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    height: 61px;
+    &:hover{
+      background-color: $secondary-hover;
+    }
   }
 }
 .sideNav {
   background-color: white;
   width: 300px;
-  position: absolute;
+  float:left;
   height: 100%;
+  position: fixed;
   @media (max-width: $medium){
     visibility: hidden;
+  }
+  #avatar{
+    border-radius: 50%;
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+  #caption {
+    color: $secondary-color;
+    display: inline-block;
+    margin-left: 33%;
+  }
+  #profileLink {
+    a{
+      font-size: 15px;
+      color: $secondary-color;
+    }
+  }
+  #checkmark {
+    height: 20px;
+    margin-left: 26%;
+    padding-right: 10px;
+  }
+  #location {
+      font-size: 15px;
+      color: $secondary-color;
+      margin-left: 36%;
+      margin-top: 10px;
   }
 }

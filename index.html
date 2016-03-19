@@ -11,7 +11,10 @@
   <body class="loading">
     <section>
       <div class="sideNav">
-
+        <figure class="profilePic text-center"></figure>
+        <h4 id="caption" class="text-center"></h4>
+        <p id="profileLink" class="text-center"></p>
+        <figure id="hireable"></figure>
       </div>
       <div class="container">
         <h1>Github User Search</h1>
@@ -20,15 +23,17 @@
           <input id="user" type="text" placeholder="Username"/>
           <span>Username</span>
           </label>
+          <span class="input-group-btn">
           <button class="btn btn-danger" id="userSearch">FIND</button>
+          <span>
         </form>
 
+      </div>
+      <div class="container">
         <div id="result">
-
         </div>
         <div>
           <ul id="repos">
-
           </ul>
         </div>
       </div>

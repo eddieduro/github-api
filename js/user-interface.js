@@ -15,6 +15,7 @@ $(document).ready(function() {
 		var results = getRepos(searchedUser);
   });
 
+  // loading animation
   $(function() {
   $('input').on('change', function() {
     var input = $(this);
@@ -25,8 +26,8 @@ $(document).ready(function() {
     }
   });
 
-  setTimeout(function() {
-    $('#user').trigger('focus');
-  }, 500);
-});
+    setTimeout(function() {
+      $('#user').trigger('focus');
+    }, 500);
+  });
 });
