@@ -23,7 +23,7 @@ exports.getRepos = function(user){
 					$('#result').html("<h3>" + name + "'s repositories</h3>");
 					$('#repos').removeClass('emptyList').prepend("<li class='animated slideInDown'><a target='_blank' href='"+ repo.svn_url +"'>" + repo.name + "</a><span> " + repo.description + "</span></li>");
 					if(hireable){
-						$('#hireable').html("<img src='./../check.svg' id='checkmark'><span>Seeking Work</span>" + "<p id='location'>" + area +"</p>" );
+						$('#hireable').html("<img src='../../check.svg' id='checkmark'><span>Seeking Work</span>" + "<p id='location'>" + area +"</p>" );
 					} else {
 						$('#hireable').html("<p id='location'>" + area +"</p>" );
 					}
